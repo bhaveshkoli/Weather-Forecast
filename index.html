@@ -1,0 +1,75 @@
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Forecast</title>
+   
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+     integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+     crossorigin=""/>
+
+    
+     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+     integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+     crossorigin=""></script>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>Weather Forecast</h1>
+            <label class="switch">
+                <input type="checkbox" id="darkModeToggle">
+                <span class="slider"></span>
+            </label>
+        </header>
+
+        <div class="search ">
+            <input type="text" placeholder="Enter city name" class="srachBox ">
+            <button class="scrachBtn">Search</button>
+        </div>
+
+        <section class="current-weather">
+            <div>
+                <h1 class="cityName"></h1>
+                <strong><p class="temperature"></p></strong>
+            </div>
+            <div class="weatheIcons">
+                <!-- the icons of weather are in this div  -->
+                 <img src="img/weather-news.png" alt="" class="weather-icons">
+            </div>
+        </section>
+
+        
+
+
+        <div class="forecast">
+            <div class="forecast-card">
+                <img src="img/wind.png"  id="windIcon">
+                <p>Wind Speed <h3 class="wind"></h3></p>
+            </div>
+            <div class="forecast-card">
+                <img src="img/humidity.png" id="humidityIcon">
+                <p>Humidity<h3 class="humi"></h3></p>  
+            </div>     
+        </div>
+        <div class="forecast">
+            <div class="forecast-card">
+                <img src="img/sunrise.png"  id="sunRice">
+                <p>Sunrise <h3 class="sunRice"></h3></p>
+            </div>
+            <div class="forecast-card">
+                <img src="img/sunSet.png" id="sunSet">
+                <p>Sunset<h3 class="sunSet"></h3></p>  
+            </div>     
+        </div>
+        <div id="map" class="current-weather"></div>
+    </div>
+   
+    
+    <script src="app.js"></script>
+    
+    
+</body>
+</html> 
